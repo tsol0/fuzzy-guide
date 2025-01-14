@@ -1,11 +1,10 @@
 import e from "express";
-
 import { Job } from "../model/jobModel.js";
 
 const router = e.Router();
 
 // add new job
-router.post(' ', async (request, response) => {
+router.post('/', async (request, response) => {
   try {
     if (!request.body.company ||
     !request.body.position ||
