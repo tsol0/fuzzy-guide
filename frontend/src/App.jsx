@@ -10,11 +10,11 @@ import ShowJob from './pages/ShowJob';
 export default function App() {
   return (
     <Routes>
-      <Route paths='/' element={<Home />} />
-      <Route paths='/jobs/create' element={<CreateJob />} />
-      <Route paths='/jobs/delete/:id' element={<DeleteJob/>} />
-      <Route paths='/jobs/edit/:id' element={<EditJob/>} />
-      <Route paths='/jobs/details/:id' element={<ShowJob/>} />
+      <Route path='/' element={<Home />} />
+      <Route path='/jobs/create' element={<CreateJob />} />
+      <Route path='/jobs/delete/:id' element={<DeleteJob/>} />
+      <Route path='/jobs/edit/:id' element={<EditJob/>} />
+      <Route path='/jobs/details/:id' element={<ShowJob/>} />
     </Routes>
   )
 }
