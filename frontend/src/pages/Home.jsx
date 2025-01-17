@@ -46,7 +46,7 @@ function Home() {
         </button>
       </div>
       <div className='flex justify-between items-center'>
-        <h1 className='text-3xl my-8'>Books Lists</h1>
+        <h1 className='text-3xl my-8'>Jobs Lists</h1>
         <Link to='/jobs/create'>
         <MdOutlineAddBox className='text-sky-800 text-4xl' />
         </Link>
