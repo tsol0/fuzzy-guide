@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 // import {BsInfoCircle} from 'react-icons/bs';
 import {MdOutlineAddBox, MdOutlineDelete} from 'react-icons/md';
 import JobsTable from '../components/home/JobsTable';
-import JobsCard from '../components/home/JobsCard';
+// import JobsCard from '../components/home/JobsCard';
 
 
 
@@ -14,7 +14,7 @@ function Home() {
 
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [showType, setShowType] = useState('table');
+  // const [showType, setShowType] = useState('table');
 
   useEffect(
     () => {
@@ -33,31 +33,13 @@ function Home() {
   );
   return (
     <div className='p-4'>
-      <div className='flex jsutify-center items-center gap-x-4'>
-        <button className='bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg'
-        onClick={() => setShowType('table')}
-        >
-          Table
-        </button>
-        <button
-         className='bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg'
-         onClick={() => {setShowType('card')}}>
-            Card
-        </button>
-      </div>
       <div className='flex justify-between items-center'>
-        <h1 className='text-3xl my-8'>Jobs Lists</h1>
+        <h1 className='text-3xl my-8'>Your Job Applications</h1>
         <Link to='/jobs/create'>
         <MdOutlineAddBox className='text-sky-800 text-4xl' />
         </Link>
-      </div>
-      {loading ? (
-        <Spinner />
-      ) : showType === 'table' ? (
-        <JobsTable jobs={jobs} />
-      ) : (
-        <JobsCard jobs={jobs} />
-      )}
+      </div> 
+        { loading ? <Spinner /> : <JobsTable jobs={jobs} />}
 
     </div>
   )

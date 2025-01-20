@@ -10,7 +10,7 @@ router.post('/', async (request, response) => {
     !request.body.position ||
     !request.body.status ||
     !request.body.date) {
-      return response.status(400).send({message: 'Send all required fields: company, position, staus, date'});
+      return response.status(400).send({message: 'Send all required fields: company, position, status, date'});
     }
 
     const newJob = {
