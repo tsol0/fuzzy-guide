@@ -54,7 +54,7 @@ function CreateJob() {
       <label htmlFor="date">Date:</label>
       <input type="date" value={date}
       onChange={ e => setDate(e.target.value)} />
-      <button type='button' onClick={handleChanage}>Save</button>
+      <button onClick={handleChanage}>Save</button>
       </div>
     </div>
   )
