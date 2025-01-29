@@ -71,7 +71,7 @@ router.put('/:id',
           return response.status(400).send({message: 'Send all required fields: company, position, status, date'});
         }
 
-      const { id } = request.params.id;
+      const { id } = request.params;
       const result = await Job.findByIdAndUpdate(id, request.body);
 
       if (!result) {
