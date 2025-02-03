@@ -2,9 +2,9 @@ import React from 'react';
 import {Routes, Route} from 'react-router-dom';
 
 import Home from './pages/Home';
-import CreateJob from './pages/createJob';
-import DeleteJob from './pages/deleteJob';
-import EditJob from './pages/editJob';
+import CreateJob from './pages/CreateJob';
+import DeleteJob from './pages/DeleteJob';
+import EditJob from './pages/EditJob';
 import ShowJob from './pages/ShowJob';
 
 export default function App() {
