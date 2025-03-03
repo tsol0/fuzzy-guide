@@ -39,41 +39,52 @@ function CreateJob() {
       )
   } 
   return (
-    <div className='m-12'>
+    <section className='w-full h-full flex justify-center p-3'>
       {loading ? <Spinner /> : ''}
 
-      <div className='flex flex-col items-center bg-blue-400 p-5 rounded-lg'>
+      <div className='bg-blue-100 m-4 p-2 border flex flex-col w-1/2 items-center border-2 border-blue-300 rounded-lg'>
 
-      <h1 className='text-3xl'>Job Details Capture</h1>
-      
-      <div className='pt-3 flex flex-col'>
-      <label htmlFor="company">Company:</label>
-      <input required type="text" value={company} 
-      onChange={(e) =>setCompany(e.target.value)} />
+        <h1 className='text-3xl mb-2'> Capture Job Details</h1>
+        
+        <div className='pb-2'>
+          <label htmlFor="company">Company:</label>
+          <div className="border-2 border-blue-300 rounded-sm">
+            <input required type="text" value={company} 
+            onChange={(e) =>setCompany(e.target.value)} />
+          </div>
+        </div>
+
+        <div className='pb-2'>
+          <label htmlFor="position">Position:</label>
+          <div className="border-2 border-blue-300 rounded-sm">
+            <input type="text" value={position}
+            onChange={ e => setPosition(e.target.value)}/>
+          </div>
+        </div>
+
+        <div className='pb-2'>
+          <label htmlFor="status">Status:</label>
+          <div className="border-2 border-blue-300 rounded-sm">
+            <select name="status" id="status" onChange={ e => setStatus(e.target.value)}>
+              <option value={"pending"}>Pending</option>
+              <option value={"accepted"}>Accepted</option>
+              <option value={"rejected"}>Rejected</option>
+            </select>
+          </div>
+        </div>
+
+        <div className='pb-2'>
+          <label htmlFor="date">Date:</label>
+          <div className="border-2 border-blue-300 rounded-sm">
+            <input type="date" value={date}
+            onChange={ e => setDate(e.target.value)} />
+          </div>
+        </div>
+
+        <button className='border-2 border-blue-300 m-1 p-2 rounded-lg text-black text-xl' onClick={handleChanage}>Save</button>
+
       </div>
-
-      <div className='pt-3 flex flex-col'>
-      <label htmlFor="position">Position:</label>
-      <input type="text" value={position}
-      onChange={ e => setPosition(e.target.value)}/>
-      </div>
-
-      <div className='pt-3 flex flex-col'>
-      <label htmlFor="status">Status:</label>
-      <input type="text" value={status}
-      onChange={ e => setStatus(e.target.value)}  />
-      </div>
-
-      <div className='pt-3 pb-3 flex flex-col'>
-      <label htmlFor="date">Date:</label>
-      <input type="date" value={date}
-      onChange={ e => setDate(e.target.value)} />
-      </div>
-
-      <button className='border-4 border-solid p-4 rounded-lg text-white text-xl' onClick={handleChanage}>Save</button>
-
-      </div>
-    </div>
+    </section>
   )
 }
 
