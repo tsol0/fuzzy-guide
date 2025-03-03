@@ -29,16 +29,18 @@ function Home() {
     }, []
   );
   return (
-    <div className='p-4'>
-      <div className='flex justify-between items-center'>
-        <h1 className='text-3xl my-8'>Your Job Applications</h1>
+    <section className='p-4'>
+      <div className='flex flex-row justify-between pb-3'>
+        <h1 className='text-3xl'>My Job Apps</h1>
         <Link to='/jobs/create'>
-        <MdOutlineAddBox className='text-sky-800 text-4xl' />
+          <MdOutlineAddBox className='text-sky-600 text-4xl'/>  
         </Link>
       </div> 
+      <div className="flex justify-center border-2 border-blue-400 mr-6 ml-6 rounded-md p-2">
         { loading ? <Spinner /> : <JobsTable jobs={jobs} />}
+      </div>
 
-    </div>
+    </section>
   )
 }
 
