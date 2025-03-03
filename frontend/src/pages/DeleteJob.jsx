@@ -28,14 +28,16 @@ function DeleteJob() {
   }
 
   return (
-    <div>
-      <h1>Delete Book</h1>
-      <div>
+    <section className='p-4'>
+      <div className='p-3 bg-blue-100 w-1/3'>
+        <h1 className='text-3xl mb-2'>Delete Job</h1>
         {loading ? <Spinner /> : ""}
-        <h3>Are you sure you want to this job</h3>
-        <button type="button" onClick={handleDeleteJob}>Yes, delete it</button>
+        <div className='flex flex-col items-center border-2 border-blue-300 rounded-xl w-[600px] p-8 mx-auto'>
+          <h3 className='text-2xl'>Are you sure you want delete to this job?</h3>
+          <button className='p-4 bg-blue-300 text-white m-4 rounded-xl' type="button" onClick={handleDeleteJob}>Yes, delete it</button>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 
